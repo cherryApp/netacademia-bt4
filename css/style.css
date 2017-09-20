@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
     padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
   }
   
   .footer {
@@ -52,4 +54,8 @@ body {
       padding-right: 0;
       padding-left: 0;
     }
+  }
+
+  .lead {
+    font-weight: 100;
   }
