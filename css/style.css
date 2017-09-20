@@ -59,3 +59,8 @@ body {
   .lead {
     font-weight: 100;
   }
+
+  /* Home page elements. */
+  .home-media-image {
+    width: 25%;
+  }
