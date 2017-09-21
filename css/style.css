@@ -10,6 +10,10 @@ body {
     padding-bottom: 40px;
     margin-top: 40px;
     border-top: 1px solid #eee;
+    position: fixed;
+    bottom: 0;
+    left: 40px;
+    right: 40px;
   }
   
   /* Main marketing message and sign up button */
@@ -64,4 +68,9 @@ body {
   /* Home page elements. */
   .home-media-image {
     width: 25%;
+  }
+
+  /* Login page. */
+  .row-login-form {
+    margin-top: 50px;
   }

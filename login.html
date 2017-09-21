@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>JegyBazár</title>
+    <title>JegyBazár | Bejelentkezés</title>
 
     <!-- Bootstrap core CSS -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -48,31 +48,45 @@
         </nav>
       </div>
 
-      <!-- Jumbotron -->
-      <div class="jumbotron">
-        <h1>Marketing stuff!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
-      </div>
+      <!-- Login form. -->
+      <div class="row justify-content-center row-login-form">
+        <div class="col-10 col-sm-8 col-md-6 col-lg-4">
+          <!-- Alert message. -->
+          <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            Hello, itt tudsz belépni.
+          </div>
 
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+          <div class="card border-secondary">
+            <div class="card-header">Bejelentkezés</div>
+            <div class="card-body">
+              <form id="loginForm" novalidate>
+                <div class="form-group">
+                  <label for="loginEmail">Email</label>
+                  <input title="hibás email cím" name="loginEmail" type="email" class="form-control" id="loginEmail" placeholder="email">
+                  <small id="emailHelp" class="form-text text-muted">vigyázz az email címedre</small>
+                </div>
+                <div class="form-group">
+                  <label for="loginPassword">Jelszó</label>
+                  <input name="loginPassword" type="password" class="form-control" id="loginPassword" placeholder="jelszó">
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input name="rememberMe" type="checkbox" class="form-check-input">
+                    emlékezz rám
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">belépés</button>
+              </form>
+            </div>
+          </div>
+
+
         </div>
       </div>
+      <!-- /Login form. -->
 
       <!-- Site footer -->
       <footer class="footer">
