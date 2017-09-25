@@ -2,20 +2,39 @@
 @import url('../lib/font-awesome-4.7.0/css/font-awesome.min.css');
 body {
     padding-top: 20px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 100%;
   }
+
+.container {
+  position: relative;
+}
+
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
   
-  .footer {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-top: 40px;
-    border-top: 1px solid #eee;
-    position: fixed;
-    bottom: 0;
-    left: 40px;
-    right: 40px;
-  }
+footer.footer {
+  padding: 15px 15px 15px 30px;
+  margin: 20px 0;
+  border: 1px solid #e5e5e5;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(to bottom, #f7f7f7 0%,#eee 100%);
+  border-radius: 3px;
+}
+
+footer.footer p {
+  margin: 0;
+}
   
   /* Main marketing message and sign up button */
   .jumbotron {
@@ -67,8 +86,9 @@ body {
   }
 
   /* Home page elements. */
-  .home-media-image {
-    width: 25%;
+  .home-media-icon {
+    font-size: 48px;
+    color: #6B6B6B;
   }
 
   /* Login page. */
