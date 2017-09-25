@@ -58,6 +58,19 @@
         <p></p>
       </div>
 
+      <div class="row events-search-row">
+        <div class="col-12">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="keresés..." aria-label="keresés">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+
       <!-- Example row of columns -->
       <!-- 
       <div class="row">
@@ -110,31 +123,34 @@
       </div>
       -->
 
-    <div class="card-deck">
-      <div class="card">
+    <div class="card-deck events-card-deck">
+      <a href="tickets.html?event=1" class="card">
           <img class="card-img-top" src="img/sziget.png" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Sziget Fesztivál</h4>
             <p class="card-text">Látogass el a 25 éves Szigetre és bulizz a legjobb arcokkal</p>
             <p class="card-text"><small class="text-muted">2017-08-03</small></p>
+            <button class="btn btn-link float-right">tovább</button>
           </div>
-        </div>
-      <div class="card">
+        </a>
+        <a href="tickets.html?event=2" class="card">
           <img class="card-img-top" src="img/diotoro.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Diótörő Balett</h4>
             <p class="card-text">Nézd meg a grandiőzus balett előadást most elővételben</p>
             <p class="card-text"><small class="text-muted">2017-11-23</small></p>
+            <p><button class="btn btn-link float-right">tovább</button></p>
           </div>
-        </div>
-      <div class="card">
+        </a>
+        <a href="tickets.html?event=3" class="card">
           <img class="card-img-top" src="img/macskak.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Macskák Musical</h4>
             <p class="card-text">Amerika házhoz jön, ebben a nagyszerű és izgalmas musicalban</p>
             <p class="card-text"><small class="text-muted">2018-02-11</small></p>
+            <p><button class="btn btn-link float-right">tovább</button></p>
           </div>
-        </div>
+        </a>
     </div>
 
     </div> <!-- /container -->
@@ -153,5 +169,20 @@
     <script src="lib/jquery-3.2.1.slim.min.js"></script>
     <script src="lib/popper.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+      $(".events-search-row input").on("keyup", function(ev) {
+      $.each( $(".events-card-deck .card .card-title"), function(i, e)   {
+          var elem = $(e);
+          var search = ev.target.value.toLowerCase();
+          var content = elem.html().toLowerCase();
+          if ( content.indexOf(search) == -1 ) {
+            elem.parents(".card").hide();
+          } else {
+            elem.parents(".card").show();
+          }
+        });
+      });
+    </script>
   </body>
 </html>

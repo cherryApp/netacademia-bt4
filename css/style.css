@@ -114,3 +114,32 @@ footer.footer p {
     left: 10px;
     color: aliceblue;
   }
+
+  /* Events page. */
+  .events-card-deck .card {
+    box-shadow: 0 0 2px;
+    color: black;
+    position: relative;
+  }
+  .events-card-deck .card:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 6px;
+    text-decoration: none;
+  }
+  .events-card-deck .card .btn-link:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .events-card-deck .card .btn-link {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+
+
+  .events-search-row {
+    margin-bottom: 15px;
+  }
+  .events-search-row button i {
+    transform: scale(-1, 1);
+  }
